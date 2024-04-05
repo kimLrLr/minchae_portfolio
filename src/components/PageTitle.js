@@ -1,3 +1,11 @@
-export const PageTitle = () => {
-  return <div>PageTitle</div>;
+import { Helmet, HelmetProvider } from "react-helmet-async";
+
+export const PageTitle = ({ titleName }) => {
+  return (
+    <HelmetProvider>
+      <Helmet>
+        <title>Portfolio | {titleName} </title>
+      </Helmet>
+    </HelmetProvider>
+  );
 };
