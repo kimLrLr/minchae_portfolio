@@ -1,6 +1,10 @@
 import { createGlobalStyle } from "styled-components";
 import reset from "styled-reset";
 
+export const basic = {
+  basePadding: "20px 5%",
+};
+
 export const GlobalStyled = createGlobalStyle`
 
     ${reset}
