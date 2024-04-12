@@ -1,8 +1,9 @@
 import styled from "styled-components";
+import { basic } from "../style/GlobalStyled";
 
 const Container = styled.div`
-  height: 100vh;
   background-color: aliceblue;
+  padding: ${basic.basePadding};
 `;
 
 export const Layout = ({ children }) => {

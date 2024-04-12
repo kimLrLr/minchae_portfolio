@@ -1,7 +1,9 @@
 import { Layout } from "../../components/Layout";
 import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
-import movieImg from "../../assets/movieImg.png";
+import { frontCon } from "../../data/frontCon";
+import gitImg from "../../assets/gitImg.png";
+import symImg from "../../assets/symImg.png";
 
 const MainWrap = styled.div``;
 
@@ -28,20 +30,41 @@ export const FrontPF = () => {
       <Layout>
         <MainWrap>
           {/* 콘텐츠 시작 */}
-          <Con>
-            <Bg>
-              <img src={movieImg} alt="영화이미지" />
-            </Bg>
-            <ConTitle>프로젝트 이름1</ConTitle>
-            <ConDesc>
-              프로젝트 내용이 적히는 부분입니다.
-              <br /> 실제로는 박스 배경 색 없이 진행
-            </ConDesc>
-            <IconWrap>
-              <GitIcon />
-              <LinkIcon />
-            </IconWrap>
-          </Con>
+          {frontCon.map((data) => (
+            <Con key={data.id}>
+              <Bg>
+                <img
+                  src={process.env.PUBLIC_URL + `/img/${data.img}.png`}
+                  alt={data.imgTitle}
+                />
+              </Bg>
+              <ConTitle>{data.title}</ConTitle>
+              <ConDesc>{data.desc}</ConDesc>
+              <IconWrap>
+                <GitIcon>
+                  <a
+                    href={data.git}
+                    title={data.gitTitle}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <img src={gitImg} alt={data.gitTitle} />
+                  </a>
+                </GitIcon>
+
+                <LinkIcon>
+                  <a
+                    href={data.dep}
+                    title={data.depTitle}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <img src={symImg} alt={data.depTitle} />
+                  </a>
+                </LinkIcon>
+              </IconWrap>
+            </Con>
+          ))}
           {/* 콘텐츠 끝 */}
         </MainWrap>
       </Layout>
