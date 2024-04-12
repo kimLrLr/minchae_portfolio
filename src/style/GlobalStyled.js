@@ -14,6 +14,11 @@ export const GlobalStyled = createGlobalStyle`
         color: #1d1d1d;
     }
 
+    img{
+        display: block;
+        width: 100%;
+    }
+
     a{
         text-decoration: none;
         display: block;
