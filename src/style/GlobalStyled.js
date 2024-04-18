@@ -12,6 +12,7 @@ export const GlobalStyled = createGlobalStyle`
     *{
         box-sizing: border-box;
         color: #1d1d1d;
+        word-wrap: break-word;
     }
 
     img{
@@ -31,9 +32,9 @@ export const GlobalStyled = createGlobalStyle`
 
     body{
         letter-spacing: -1px;
-        word-break: break-all;
+        word-break: keep-all;
         font-family: "Noto Sans KR", sans-serif !important;
-        overflow-x: hidden;
+        /* overflow-x: hidden; */
     }
 
 `;

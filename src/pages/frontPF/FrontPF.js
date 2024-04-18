@@ -5,20 +5,38 @@ import { frontCon } from "../../data/frontCon";
 import gitImg from "../../assets/gitImg.png";
 import symImg from "../../assets/symImg.png";
 
-const MainWrap = styled.div`
-  background-color: gold;
-`;
+const MainWrap = styled.div``;
 
 const Con = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
   height: 40vh;
+  max-width: 100vw;
+  margin-bottom: 5vh;
+  /* background-color: salmon; */
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    margin-bottom: 250px;
+  }
 `;
 
 const Bg = styled.div`
   img {
     width: 500px;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    img {
+      width: 450px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    img {
+      width: 80vw;
+    }
   }
 `;
 
@@ -26,44 +44,68 @@ const ConWrap = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 2vw;
 `;
 
 const TextWrap = styled.div`
   display: flex;
   flex-direction: column;
-  margin-left: 2vw;
-  background-color: salmon;
+  width: 100%;
+  border-radius: 20px;
+
+  @media screen and (max-width: 768px) {
+    align-items: center;
+  }
 `;
 
 const ConTitle = styled.div`
   font-weight: 900;
   font-size: 28px;
   margin-bottom: 4vh;
-  width: 10vw;
+  width: 50vw;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 20px;
+    text-align: center;
+  }
 `;
 
 const ConDesc = styled.div`
-  width: 50vw;
+  width: 80%;
+  line-height: 22px;
+  font-weight: 500;
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 65%;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    font-size: 15px;
+  }
 `;
 
 const IconWrap = styled.div`
   display: flex;
-  width: 100%;
-  margin-top: 4vh;
-  margin-left: 4vw;
-  background-color: teal;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 80px;
+  margin-top: 2.5vh;
+  @media screen and (max-width: 768px) {
+    margin: 30px auto;
+  }
 `;
 
 const GitIcon = styled.div`
   img {
-    width: 35px;
+    width: 30px;
   }
 `;
 
 const LinkIcon = styled.div`
   img {
-    width: 35px;
+    width: 30px;
   }
 `;
 
@@ -91,7 +133,7 @@ export const FrontPF = () => {
                   <GitIcon>
                     <a
                       href={data.git}
-                      title={data.gitTitle}
+                      title="깃허브로 이동"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -101,7 +143,7 @@ export const FrontPF = () => {
                   <LinkIcon>
                     <a
                       href={data.dep}
-                      title={data.depTitle}
+                      title="배포 사이트로 이동"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
