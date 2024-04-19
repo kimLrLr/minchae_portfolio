@@ -21,12 +21,23 @@ const Logo = styled.div`
 `;
 
 const Menu = styled.ul`
-  width: 8vw;
+  width: 10vw;
+  max-width: 150px;
   display: flex;
   justify-content: space-between;
 
   h2 {
     font-weight: 900;
+  }
+
+  @media screen and (max-width: 1024px) and (min-width: 768px) {
+    width: 15vw;
+  }
+  @media screen and (max-width: 768px) {
+    width: 30vw;
+    max-width: 120px;
+    font-size: 18px;
+    margin-right: 1.5vw;
   }
 `;
 

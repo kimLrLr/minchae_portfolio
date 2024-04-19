@@ -30,11 +30,21 @@ export const GlobalStyled = createGlobalStyle`
         list-style: none;
     }
 
+    body, html{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     body{
         letter-spacing: -1px;
         word-break: keep-all;
         font-family: "Noto Sans KR", sans-serif !important;
-        /* overflow-x: hidden; */
+        width: 100%;
+        height: 100%;
+        overflow-x: hidden;
+        touch-action: pan-y;
     }
 
 `;
