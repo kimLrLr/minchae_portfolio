@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { Layout } from "../../components/Layout";
 import { PageTitle } from "../../components/PageTitle";
+import { colors } from "../../style/GlobalStyled";
 
 const ImgWrap = styled.div`
-  height: 75vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,6 +20,7 @@ const ImgWrap = styled.div`
     text-align: center;
     font-weight: 600;
     cursor: default;
+    color: ${colors.sideText};
   }
 
   @media screen and (max-width: 1024px) and (min-width: 768px) {

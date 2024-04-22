@@ -5,6 +5,11 @@ export const basic = {
   basePadding: "20px 5%",
 };
 
+export const colors = {
+  mainText: "#1d1d1d",
+  sideText: "#444",
+};
+
 export const GlobalStyled = createGlobalStyle`
 
     ${reset}
@@ -12,7 +17,6 @@ export const GlobalStyled = createGlobalStyle`
     *{
         box-sizing: border-box;
         color: #1d1d1d;
-        word-wrap: break-word;
     }
 
     img{

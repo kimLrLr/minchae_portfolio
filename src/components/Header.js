@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { basic } from "../style/GlobalStyled";
+import { basic, colors } from "../style/GlobalStyled";
 
 const SHeader = styled.div`
   width: 100vw;
@@ -16,7 +16,7 @@ const SHeader = styled.div`
 const Logo = styled.div`
   h4 {
     font-weight: 500;
-    color: #666;
+    color: ${colors.sideText};
   }
 `;
 

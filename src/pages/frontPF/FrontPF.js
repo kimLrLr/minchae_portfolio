@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { frontCon } from "../../data/frontCon";
 import gitImg from "../../assets/gitImg.png";
 import symImg from "../../assets/symImg.png";
+import { colors } from "../../style/GlobalStyled";
 
 const MainWrap = styled.div``;
 
@@ -76,6 +77,7 @@ const ConDesc = styled.div`
   width: 80%;
   line-height: 22px;
   font-weight: 500;
+  color: ${colors.sideText};
   @media screen and (max-width: 1024px) and (min-width: 768px) {
     width: 65%;
     font-size: 14px;
@@ -120,7 +122,7 @@ export const FrontPF = () => {
             <Con key={data.id}>
               <Bg>
                 <img
-                  src={process.env.PUBLIC_URL + `/img/${data.img}.png`}
+                  src={process.env.PUBLIC_URL + `/img/front/${data.img}.png`}
                   alt={data.imgTitle}
                 />
               </Bg>

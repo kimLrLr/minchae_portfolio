@@ -19,7 +19,7 @@ export const frontCon = [
   },
   {
     id: 2,
-    img: `movieImg`,
+    img: `duckMbtiImg`,
     imgTitle: `duck_type_project 이미지`,
     title: `오리 MBTI`,
     desc: `현대인들의 무료한 일상을 잠시나마 달래주기 위하여 언제 어디서나 쉽게 할 수 있는 가벼운 분위기의 MBTI 테스트를 제작했습니다.`,
@@ -28,6 +28,15 @@ export const frontCon = [
   },
   {
     id: 3,
+    img: `weatherImg`,
+    imgTitle: `날씨 앱 이미지`,
+    title: `날씨 앱`,
+    desc: `현재 사용자 위치의 날씨 정보를 빠르고 간편하게 알아볼 수 있도록 만들었습니다.`,
+    git: `https://github.com/kimLrLr/weather_app`,
+    dep: `https://kimlrlr.github.io/weather_app/`,
+  },
+  {
+    id: 4,
     img: `bobImg`,
     imgTitle: `밥묵다 이미지`,
     title: `밥은 묵고 다니나?`,
