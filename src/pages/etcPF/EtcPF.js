@@ -1,6 +1,7 @@
 import { Layout } from "../../components/Layout";
 import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
+import gitImg from "../../assets/gitImg.png";
 import youtubeImg from "../../assets/youtubeImg.png";
 import pdfImg from "../../assets/pdfImg.png";
 import { colors } from "../../style/GlobalStyled";
@@ -120,11 +121,26 @@ const IconWrap = styled.div`
   }
 `;
 
-const YoutubeIcon = styled.div`
+const GitIcon = styled.div`
   display: ${(props) => props.imgStyle};
   /* 각 프로젝트 별로 올린 플랫폼이 다르기 때문에 props를 이용하여 display로 처리 */
   img {
     width: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 10px;
+  }
+`;
+
+const YoutubeIcon = styled.div`
+  display: ${(props) => props.imgStyle};
+  img {
+    width: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 10px;
   }
 `;
 
@@ -133,6 +149,10 @@ const PdfIcon = styled.div`
 
   img {
     width: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0 10px;
   }
 `;
 
@@ -157,13 +177,20 @@ export const EtcPF = () => {
                   <ConDesc>
                     {data.desc}
                     <br />
-                    <p>
-                      ※김하림에서 김민채로 이름을 개명하여 개명 전 이름이
-                      나옵니다.
-                    </p>
+                    <p>{data.pTag}</p>
                   </ConDesc>
                 </TextWrap>
                 <IconWrap>
+                  <GitIcon imgStyle={data.gitIcon}>
+                    <a
+                      href={data.gitLinkText}
+                      title="GitHub로 이동"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <img src={gitImg} alt="GitHub" />
+                    </a>
+                  </GitIcon>
                   <YoutubeIcon imgStyle={data.youtubeIcon}>
                     <a
                       href={data.linkText}
@@ -171,7 +198,7 @@ export const EtcPF = () => {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <img src={youtubeImg} alt={data.gitTitle} />
+                      <img src={youtubeImg} alt="유튜브" />
                     </a>
                   </YoutubeIcon>
                   <PdfIcon imgStyle={data.pdfIcon}>
@@ -181,7 +208,7 @@ export const EtcPF = () => {
                       target="_blank"
                       rel="noreferrer noopener"
                     >
-                      <img src={pdfImg} alt={data.gitTitle} />
+                      <img src={pdfImg} alt="PDF" />
                     </a>
                   </PdfIcon>
                 </IconWrap>
