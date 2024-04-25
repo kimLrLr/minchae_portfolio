@@ -1,8 +1,8 @@
 import { Layout } from "../../components/Layout";
 import { PageTitle } from "../../components/PageTitle";
 import styled from "styled-components";
-import { frontCon } from "../../data/frontCon";
 import youtubeImg from "../../assets/youtubeImg.png";
+import pdfImg from "../../assets/pdfImg.png";
 import { colors } from "../../style/GlobalStyled";
 import { etcCon } from "../../data/etcCon";
 
@@ -15,7 +15,6 @@ const Con = styled.div`
   height: 40vh;
   max-width: 100vw;
   margin-bottom: 5vh;
-  /* background-color: salmon; */
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -26,7 +25,6 @@ const Con = styled.div`
 const Bg = styled.div`
   width: 680px;
   height: 350px;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,6 +42,7 @@ const Bg = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    height: 300px;
     img {
       width: 80vw;
     }
@@ -87,13 +86,25 @@ const ConDesc = styled.div`
   line-height: 22px;
   font-weight: 500;
   color: ${colors.sideText};
+  p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #ff00009c;
+    margin-top: 20px;
+  }
   @media screen and (max-width: 1024px) and (min-width: 768px) {
     width: 65%;
     font-size: 14px;
+    p {
+      font-size: 14px;
+    }
   }
   @media screen and (max-width: 768px) {
     width: 100%;
     font-size: 15px;
+    p {
+      font-size: 13px;
+    }
   }
 `;
 
@@ -105,10 +116,21 @@ const IconWrap = styled.div`
   margin-top: 2.5vh;
   @media screen and (max-width: 768px) {
     margin: 30px auto;
+    justify-content: center;
   }
 `;
 
 const YoutubeIcon = styled.div`
+  display: ${(props) => props.imgStyle};
+  /* 각 프로젝트 별로 올린 플랫폼이 다르기 때문에 props를 이용하여 display로 처리 */
+  img {
+    width: 30px;
+  }
+`;
+
+const PdfIcon = styled.div`
+  display: ${(props) => props.imgStyle};
+
   img {
     width: 30px;
   }
@@ -132,19 +154,36 @@ export const EtcPF = () => {
               <ConWrap>
                 <TextWrap>
                   <ConTitle>{data.title}</ConTitle>
-                  <ConDesc>{data.desc}</ConDesc>
+                  <ConDesc>
+                    {data.desc}
+                    <br />
+                    <p>
+                      ※김하림에서 김민채로 이름을 개명하여 개명 전 이름이
+                      나옵니다.
+                    </p>
+                  </ConDesc>
                 </TextWrap>
                 <IconWrap>
-                  <YoutubeIcon>
+                  <YoutubeIcon imgStyle={data.youtubeIcon}>
                     <a
-                      href={data.youtube}
-                      title="유튜브로 이동"
+                      href={data.linkText}
+                      title="YouTube로 이동"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
                       <img src={youtubeImg} alt={data.gitTitle} />
                     </a>
                   </YoutubeIcon>
+                  <PdfIcon imgStyle={data.pdfIcon}>
+                    <a
+                      href={data.linkText}
+                      title="PDF 열기"
+                      target="_blank"
+                      rel="noreferrer noopener"
+                    >
+                      <img src={pdfImg} alt={data.gitTitle} />
+                    </a>
+                  </PdfIcon>
                 </IconWrap>
               </ConWrap>
             </Con>
