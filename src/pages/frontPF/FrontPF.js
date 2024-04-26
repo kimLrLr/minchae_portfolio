@@ -5,6 +5,7 @@ import { frontCon } from "../../data/frontCon";
 import gitImg from "../../assets/gitImg.png";
 import symImg from "../../assets/symImg.png";
 import { colors } from "../../style/GlobalStyled";
+import { TopButton } from "../../components/TopButton";
 
 const MainWrap = styled.div``;
 
@@ -14,7 +15,6 @@ const Con = styled.div`
   align-items: center;
   max-width: 100vw;
   margin-bottom: 15vh;
-  /* background-color: salmon; */
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -136,7 +136,7 @@ export const FrontPF = () => {
                   <GitIcon>
                     <a
                       href={data.git}
-                      title="깃허브로 이동"
+                      title="GitHub로 이동"
                       target="_blank"
                       rel="noreferrer noopener"
                     >
@@ -158,6 +158,7 @@ export const FrontPF = () => {
             </Con>
           ))}
           {/* 콘텐츠 끝 */}
+          <TopButton />
         </MainWrap>
       </Layout>
     </>

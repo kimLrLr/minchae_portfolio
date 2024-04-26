@@ -6,6 +6,7 @@ import youtubeImg from "../../assets/youtubeImg.png";
 import pdfImg from "../../assets/pdfImg.png";
 import { colors } from "../../style/GlobalStyled";
 import { etcCon } from "../../data/etcCon";
+import { TopButton } from "../../components/TopButton";
 
 const MainWrap = styled.div``;
 
@@ -26,6 +27,7 @@ const Bg = styled.div`
   width: 680px;
   height: 350px;
   display: flex;
+
   align-items: center;
   justify-content: center;
 
@@ -42,6 +44,7 @@ const Bg = styled.div`
   }
 
   @media screen and (max-width: 768px) {
+    width: 100vw;
     height: 300px;
     img {
       width: 80vw;
@@ -217,6 +220,7 @@ export const EtcPF = () => {
             </Con>
           ))}
           {/* 콘텐츠 끝 */}
+          <TopButton />
         </MainWrap>
       </Layout>
     </>
