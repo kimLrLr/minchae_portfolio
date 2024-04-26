@@ -12,14 +12,13 @@ const Con = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 40vh;
   max-width: 100vw;
-  margin-bottom: 5vh;
+  margin-bottom: 15vh;
   /* background-color: salmon; */
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
-    margin-bottom: 250px;
+    margin-bottom: 8vh;
   }
 `;
 
@@ -70,6 +69,8 @@ const ConTitle = styled.div`
   @media screen and (max-width: 768px) {
     margin-top: 20px;
     text-align: center;
+    width: 80vw;
+    font-size: 20px;
   }
 `;
 
@@ -84,7 +85,7 @@ const ConDesc = styled.div`
   }
   @media screen and (max-width: 768px) {
     width: 100%;
-    font-size: 15px;
+    font-size: 14px;
   }
 `;
 
