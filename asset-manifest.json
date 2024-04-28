@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/minchae_portfolio/static/js/main.d18499ff.js",
+    "main.js": "/minchae_portfolio/static/js/main.ce1e5283.js",
     "static/media/symImg.png": "/minchae_portfolio/static/media/symImg.e72e6e38fbeb0f56a084.png",
     "index.html": "/minchae_portfolio/index.html",
-    "main.d18499ff.js.map": "/minchae_portfolio/static/js/main.d18499ff.js.map"
+    "main.ce1e5283.js.map": "/minchae_portfolio/static/js/main.ce1e5283.js.map"
   },
   "entrypoints": [
-    "static/js/main.d18499ff.js"
+    "static/js/main.ce1e5283.js"
   ]
 }
