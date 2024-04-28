@@ -207,7 +207,7 @@ export const EtcPF = () => {
                   </YoutubeIcon>
                   <PdfIcon imgStyle={data.pdfIcon}>
                     <a
-                      href={data.linkText}
+                      href={process.env.PUBLIC_URL + data.linkText}
                       title="PDF 열기"
                       target="_blank"
                       rel="noreferrer noopener"
