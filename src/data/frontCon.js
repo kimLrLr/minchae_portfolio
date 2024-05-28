@@ -28,6 +28,15 @@ export const frontCon = [
   },
   {
     id: 3,
+    img: `duckMbtiImg`,
+    imgTitle: `duck_type_project 이미지`,
+    title: `오리 MBTI (ver2)`,
+    desc: `처음 제작했던 MBTI 테스트에서 사용자의 불편 사항들을 조사하여 개선한 버전의 오리 MBTI 테스트입니다. `,
+    git: `https://github.com/kimLrLr/duck_type_project_ver2`,
+    dep: `https://kimlrlr.github.io/duck_type_project_ver2/`,
+  },
+  {
+    id: 4,
     img: `weatherImg`,
     imgTitle: `날씨 앱 이미지`,
     title: `날씨 앱`,
@@ -36,7 +45,7 @@ export const frontCon = [
     dep: `https://kimlrlr.github.io/weather_app/`,
   },
   {
-    id: 4,
+    id: 5,
     img: `bobImg`,
     imgTitle: `밥묵다 이미지`,
     title: `밥은 묵고 다니나?`,
